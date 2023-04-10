@@ -36,7 +36,7 @@ li::first-letter {
   color: #ffff;
   padding: 20px;
   margin-top: 15px;
-  margin-left: 28px;
+  margin-left: 0px;
   text-align: center;
 }
 
@@ -80,6 +80,7 @@ li::first-letter {
     rgba(106, 160, 207, 1) 100%
   );
   border-color: #dbe9ee;
+  margin-top: 15px;
 }
 
 form {
