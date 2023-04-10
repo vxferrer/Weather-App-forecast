@@ -25,7 +25,8 @@ function formatDate(timestamp) {
 
 // display Forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -54,6 +55,13 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+// Forecast data
+
+function getForecast(coordinates) {
+  let apiKey = "c70ecc49382165cd35t78baf90cceboa";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
 // Search Weather
 
 function showWeather(response) {
@@ -86,6 +94,8 @@ function showWeather(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${icon}.png`
   );
+
+  getForecast(response.data.coordinates);
 }
 
 // Search engine
@@ -105,7 +115,9 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
 
-// Unit convertion
+SearchWeather("Malaga");
+
+//
 
 function displayFarDegree(event) {
   event.preventDefault();
@@ -132,5 +144,3 @@ let farLink = document.querySelector("#Far-link");
 farLink.addEventListener("click", displayFarDegree);
 let celsiusLink = document.querySelector("#Cel-link");
 celsiusLink.addEventListener("click", displayCelDegree);
-
-displayForecast();
