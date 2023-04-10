@@ -22,7 +22,7 @@ li::first-letter {
   margin-bottom: 15px;
 }
 
-.full-app {
+.weather-forecast {
   max-width: 600px;
   min-width: 600px;
   border-radius: 10px;
@@ -36,6 +36,21 @@ li::first-letter {
   color: #ffff;
   padding: 20px;
   margin-top: 15px;
+  margin-left: 48px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  color: #25323f;
+}
+
+.weather-forecast-temps {
+  color: #dadde1;
+  font-size: 13px;
+}
+
+.weather-forecast-temp-max {
+  color: #25323f;
 }
 
 .search-background {

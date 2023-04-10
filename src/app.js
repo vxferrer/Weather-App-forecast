@@ -74,9 +74,7 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handleSubmit);
 
-SearchWeather("Malaga");
-
-//
+// Unit convertion
 
 function displayFarDegree(event) {
   event.preventDefault();
@@ -103,35 +101,3 @@ let farLink = document.querySelector("#Far-link");
 farLink.addEventListener("click", displayFarDegree);
 let celsiusLink = document.querySelector("#Cel-link");
 celsiusLink.addEventListener("click", displayCelDegree);
-
-// Forecast
-
-function displayForecast() {
-  let forecastElement = document.querySelector("#full-app");
-
-  let forecastHTML = `<h1 class="forecast-title" id="forecast-title">
-          Forecast (not working yet)
-        </h1>
-        <div class="row" id="days-name">
-          <div class="col-3" id="name-day-one" style="text-align: center">
-            monday
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-3" id="day-one" style="text-align: center">
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
-              id="weather-icon"
-            />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-3" style="text-align: center">
-            <span id="min-temp-one"> 18ºC </span> |
-            <span id="max-temp-one">30ºC </span>
-          </div>
-        </div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-
-displayForecast();

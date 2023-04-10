@@ -87,7 +87,10 @@
           <div class="col-6">
             <div class="d-flex weather-temperature">
               <span class="main-temp">
-                <img src="" id="weather-icon" />
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+                  id="weather-icon"
+                />
                 <strong class="temperature" id="temperature">18</strong
                 ><span class="units"
                   ><a href="#" class="active" id="Cel-link">ºC</a> |
@@ -98,15 +101,29 @@
           </div>
           <div class="col-6">
             <ul class="weather-info">
-              <li id="humidity"></li>
-              <li id="wind"></li>
-              <li id="feels-like">f</li>
+              <li id="humidity">Humidity: 13%</li>
+              <li id="wind">Wind: 6km/h</li>
+              <li id="feels-like">Feels like: 20ºC</li>
             </ul>
           </div>
         </div>
       </div>
-
-      <div class="full-app" id="full-app"></div>
+    </div>
+    <div class="weather-forecast">
+      <div class="row">
+        <div class="col-2">
+          <div class="weather-forecast-date">Thu</div>
+          <img
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+            alt=""
+            width="70px"
+          />
+          <div class="weather-forecast-temps">
+            <span class="weather-forecast-temp-min">12</span>
+            <span class="weather-forecast-temp-max">14</span>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="note">
       <p>
