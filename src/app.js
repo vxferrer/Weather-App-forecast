@@ -23,6 +23,37 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+// display Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="weather-forecast-date">${day}</div>
+          <img
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+            alt=""
+            width="70px"
+          />
+          <div class="weather-forecast-temps">
+            <span class="weather-forecast-temp-min">12</span>
+            <span class="weather-forecast-temp-max">14</span>
+          </div>
+        </div>
+      `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // Search Weather
 
 function showWeather(response) {
@@ -101,3 +132,5 @@ let farLink = document.querySelector("#Far-link");
 farLink.addEventListener("click", displayFarDegree);
 let celsiusLink = document.querySelector("#Cel-link");
 celsiusLink.addEventListener("click", displayCelDegree);
+
+displayForecast();
