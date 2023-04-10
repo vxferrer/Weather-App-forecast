@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/915ed595cc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="all-in-one">
+        <h1 class="title">
+          <i class="fa-solid fa-magnifying-glass"></i> Find the weather
+        </h1>
+        <div class="search-background">
+          <form id="search-city" class="mb-2">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter City"
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" value="search" class="search-button" />
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-9">
+              <button class="button-current" id="current-temp">
+                Current Temperature
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-6">
+            <h1 class="city" id="city">Málaga</h1>
+            <ul class="description">
+              <li id="time">Local time</li>
+              <li id="summary">clear sky</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="d-flex weather-temperature">
+              <span class="main-temp">
+                <img src="" id="weather-icon" />
+                <strong class="temperature" id="temperature">18</strong
+                ><span class="units"
+                  ><a href="#" class="active" id="Cel-link">ºC</a> |
+                  <a href="#" class="link" id="Far-link">ºF</a></span
+                >
+              </span>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul class="weather-info">
+              <li id="humidity"></li>
+              <li id="wind"></li>
+              <li id="feels-like">f</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="full-app">
+        <h1 class="forecast-title" id="forecast-title">
+          Forecast (not working yet)
+        </h1>
+        <div class="row" id="days-name">
+          <div class="col-3" id="name-day-one" style="text-align: center">
+            monday
+          </div>
+          <div class="col-3" id="name-day-two" style="text-align: center">
+            tuesday
+          </div>
+          <div class="col-3" id="name-day-three" style="text-align: center">
+            wednesday
+          </div>
+          <div class="col-3" id="name-day-four" style="text-align: center">
+            thursday
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3" id="day-one" style="text-align: center">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
+              id="weather-icon"
+            />
+          </div>
+          <div class="col-3" id="day-two" style="text-align: center">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
+              id="weather-icon"
+            />
+          </div>
+          <div class="col-3" id="day-three" style="text-align: center">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
+              id="weather-icon"
+            />
+          </div>
+          <div class="col-3" id="day-four" style="text-align: center">
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
+              id="weather-icon"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="note">
+      <p>
+        note for correction: Forecast section & Current Temperature button are
+        made with only purpose of getting the design ready.
+      </p>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

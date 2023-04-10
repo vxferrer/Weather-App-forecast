@@ -1,0 +1,173 @@
+body {
+  font-family: "Roboto Slab", serif;
+  background-color: #313131;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+li::first-letter {
+  text-transform: capitalize;
+}
+
+.all-in-one {
+  max-width: 600px;
+  min-width: 600px;
+  margin-bottom: 15px;
+}
+
+.full-app {
+  max-width: 600px;
+  min-width: 600px;
+  border-radius: 10px;
+  background: rgb(135, 142, 157);
+  background: linear-gradient(
+    185deg,
+    rgba(135, 142, 157, 1) 0%,
+    rgba(79, 109, 122, 1) 100%
+  );
+  border: 0px solid #dadde1;
+  color: #ffff;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.search-background {
+  border: 0px solid #dadde1;
+  border-radius: 10px;
+  background: rgb(220, 224, 233);
+  background: linear-gradient(
+    185deg,
+    rgba(220, 224, 233, 1) 0%,
+    rgba(192, 214, 223, 1) 100%
+  );
+  max-width: 600px;
+  min-width: 600px;
+  padding-top: 10px;
+}
+
+.weather-app {
+  max-width: 600px;
+  min-width: 600px;
+  padding: 20px;
+  border: 0px solid #dadde1;
+  border-radius: 10px;
+  background: rgb(182, 194, 217);
+  background: linear-gradient(
+    185deg,
+    rgba(182, 194, 217, 1) 0%,
+    rgba(106, 160, 207, 1) 100%
+  );
+  border-color: #dbe9ee;
+}
+
+form {
+  padding: 15px;
+}
+
+.button-current {
+  background-color: #dbe9ee;
+  border-radius: 10px;
+  border-color: #4f6d7a;
+  padding: 5px;
+  margin: 0px 230px;
+  margin-bottom: 10px;
+}
+
+.button-current:hover {
+  background-color: #4f6d7a;
+  color: #ffff;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0px 230px;
+  margin-bottom: 10px;
+}
+
+.search-button {
+  background-color: #4f6d7a;
+  color: #ffff;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.title {
+  color: #dbe9ee;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 50px;
+  max-width: 600px;
+  margin: 15px auto;
+  padding: 0;
+}
+
+.city {
+  color: #166088;
+  margin-bottom: 0;
+  font-weight: bolder;
+}
+
+.weather-info {
+  color: #4f6d7a;
+  font-size: 16px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.description {
+  color: #4f6d7a;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.main-temp {
+  color: #166088;
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.units {
+  position: relative;
+  font-size: 20px;
+  color: #4f6d7a;
+  top: -15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.weather-temperature .active {
+  color: #4f6d7a;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.forecast-title {
+  color: #dbe9ee;
+  font-size: 24px;
+  margin-left: 0px;
+  margin-top: 15px;
+  font-weight: bolder;
+}
+
+.note {
+  max-width: 600px;
+  min-width: 600px;
+  padding: 10px;
+  margin: 30px;
+  font-size: 14px;
+  color: white;
+}
