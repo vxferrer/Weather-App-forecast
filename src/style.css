@@ -1,6 +1,11 @@
 body {
   font-family: "Roboto Slab", serif;
-  background-color: #313131;
+  background: rgb(94, 92, 92);
+  background: radial-gradient(
+    circle,
+    rgba(94, 92, 92, 1) 0%,
+    rgba(49, 49, 49, 1) 78%
+  );
 }
 
 ul {
@@ -45,7 +50,7 @@ li::first-letter {
 }
 
 .weather-forecast-temps {
-  color: #dadde1;
+  color: #445c74;
   font-size: 13px;
 }
 
@@ -88,16 +93,28 @@ form {
 }
 
 .button-current {
-  background-color: #dbe9ee;
+  background: rgb(155, 178, 186);
+  background: linear-gradient(
+    167deg,
+    rgba(155, 178, 186, 1) 0%,
+    rgba(108, 133, 142, 1) 78%
+  );
   border-radius: 10px;
   border-color: #4f6d7a;
+  border: 0px;
   padding: 5px;
   margin: 0px 230px;
   margin-bottom: 10px;
 }
 
 .button-current:hover {
-  background-color: #4f6d7a;
+  background: rgb(121, 149, 161);
+  background: linear-gradient(
+    185deg,
+    rgba(121, 149, 161, 1) 0%,
+    rgba(79, 109, 122, 1) 78%
+  );
+  border: 0px;
   color: #ffff;
   border-radius: 10px;
   padding: 5px;
@@ -106,9 +123,15 @@ form {
 }
 
 .search-button {
-  background-color: #4f6d7a;
+  background: rgb(121, 149, 161);
+  background: linear-gradient(
+    185deg,
+    rgba(121, 149, 161, 1) 0%,
+    rgba(79, 109, 122, 1) 78%
+  );
   color: #ffff;
   border-radius: 10px;
+  border: 0px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
@@ -179,6 +202,21 @@ a {
   font-weight: bolder;
 }
 
+.col-2 {
+  float: left;
+  padding: 10px;
+  cursor: pointer;
+  transition: 200ms ease;
+  border-radius: 10px;
+}
+
+.col-2:hover {
+  transform: scale(1.1);
+  background: #dadde1;
+  color: #222831;
+  box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
+}
+
 .note {
   max-width: 600px;
   min-width: 600px;
@@ -186,4 +224,8 @@ a {
   margin: 30px;
   font-size: 14px;
   color: white;
+}
+
+.open-source {
+  color: #7995b2;
 }

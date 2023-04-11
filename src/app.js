@@ -36,8 +36,6 @@ function formatDay(timestamp) {
 function displayForecast(response) {
   let forecast = response.data.daily;
 
-  console.log(response.data.daily);
-
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -86,6 +84,8 @@ function getForecast(coordinates) {
 // Search Weather
 
 function showWeather(response) {
+  celsiusTemp = response.data.temperature.current;
+
   let temperature = Math.round(celsiusTemp);
   let humidity = Math.round(response.data.temperature.humidity);
   let wind = Math.round(response.data.wind.speed);
@@ -102,8 +102,6 @@ function showWeather(response) {
   let dateElement = document.querySelector("#time");
   let iconElement = document.querySelector("#weather-icon");
 
-  celsiusTemp = response.data.temperature.current;
-
   tempElement.innerHTML = temperature;
   humElement.innerHTML = `Humidity: ${humidity}%`;
   windElement.innerHTML = `Wind: ${wind} km/h`;
@@ -118,6 +116,23 @@ function showWeather(response) {
 
   getForecast(response.data.coordinates);
 }
+
+// Current Weather
+
+function iAmHere(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "c70ecc49382165cd35t78baf90cceboa";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+function getRealPosition() {
+  navigator.geolocation.getCurrentPosition(iAmHere);
+}
+
+let localWeather = document.querySelector("#current-temp");
+localWeather.addEventListener("click", getRealPosition);
 
 // Search engine
 
@@ -138,7 +153,7 @@ form.addEventListener("submit", handleSubmit);
 
 SearchWeather("Malaga");
 
-//
+// display Farhenheit
 
 function displayFarDegree(event) {
   event.preventDefault();
