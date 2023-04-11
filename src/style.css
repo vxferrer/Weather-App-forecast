@@ -78,12 +78,7 @@ li::first-letter {
   padding: 20px;
   border: 0px solid #dadde1;
   border-radius: 10px;
-  background: rgb(182, 194, 217);
-  background: linear-gradient(
-    185deg,
-    rgba(182, 194, 217, 1) 0%,
-    rgba(106, 160, 207, 1) 100%
-  );
+  background-image: url("img/sea.jpeg");
   border-color: #dbe9ee;
   margin-top: 15px;
 }
@@ -149,26 +144,26 @@ form {
 }
 
 .city {
-  color: #166088;
+  color: #4082a6;
   margin-bottom: 0;
   font-weight: bolder;
 }
 
 .weather-info {
-  color: #4f6d7a;
+  color: #dbe9ee;
   font-size: 16px;
   text-align: right;
   margin-right: 20px;
 }
 
 .description {
-  color: #4f6d7a;
+  color: #dbe9ee;
   font-size: 16px;
   margin-bottom: 20px;
 }
 
 .main-temp {
-  color: #166088;
+  color: #4082a6;
   font-size: 40px;
   font-weight: bolder;
   margin: 0;
@@ -182,11 +177,12 @@ form {
 }
 
 a {
+  color: #dbe9ee;
   text-decoration: none;
 }
 
 .weather-temperature .active {
-  color: #4f6d7a;
+  color: #4082a6;
   cursor: default;
 }
 
