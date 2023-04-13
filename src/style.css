@@ -22,14 +22,13 @@ li::first-letter {
 }
 
 .all-in-one {
-  max-width: 100%;
-  min-width: 100%;
+  width: 100%;
   margin-bottom: 15px;
 }
 
 .weather-forecast {
-  max-width: 100%;
-  min-width: 100%;
+  width: 100%;
+
   border-radius: 10px;
   background: rgb(135, 142, 157);
   background: linear-gradient(
@@ -73,8 +72,7 @@ li::first-letter {
 }
 
 .weather-app {
-  max-width: 100%;
-  min-width: 100%;
+  width: 100%;
   padding: 20px;
   border: 0px solid #dadde1;
   border-radius: 10px;
@@ -83,8 +81,15 @@ li::first-letter {
   margin-top: 15px;
 }
 
+img {
+  width: 50%;
+  height: auto;
+}
+
 form {
   padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .button-current {
@@ -170,10 +175,10 @@ form {
 }
 
 .units {
-  position: relative;
+  display: flex;
   font-size: 20px;
   color: #4f6d7a;
-  top: -15px;
+  bottom: -15px;
 }
 
 a {
@@ -214,8 +219,7 @@ a {
 }
 
 .note {
-  max-width: 100%;
-  min-width: 100%;
+  width: 100%;
   padding: 10px;
   margin: 30px;
   font-size: 14px;
