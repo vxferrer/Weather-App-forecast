@@ -22,14 +22,14 @@ li::first-letter {
 }
 
 .all-in-one {
-  max-width: 600px;
-  min-width: 600px;
+  max-width: 100%;
+  min-width: 100%;
   margin-bottom: 15px;
 }
 
 .weather-forecast {
-  max-width: 600px;
-  min-width: 600px;
+  max-width: 100%;
+  min-width: 100%;
   border-radius: 10px;
   background: rgb(135, 142, 157);
   background: linear-gradient(
@@ -67,14 +67,14 @@ li::first-letter {
     rgba(220, 224, 233, 1) 0%,
     rgba(192, 214, 223, 1) 100%
   );
-  max-width: 600px;
-  min-width: 600px;
+  max-width: 100%;
+  min-width: 100%;
   padding-top: 10px;
 }
 
 .weather-app {
-  max-width: 600px;
-  min-width: 600px;
+  max-width: 100%;
+  min-width: 100%;
   padding: 20px;
   border: 0px solid #dadde1;
   border-radius: 10px;
@@ -97,7 +97,7 @@ form {
   border-radius: 10px;
   border-color: #4f6d7a;
   border: 0px;
-  padding: 6px;
+  padding: 5px;
   margin: 0px 0px;
   margin-bottom: 10px;
 }
@@ -112,7 +112,7 @@ form {
   border: 0px;
   color: #ffff;
   border-radius: 10px;
-  padding: 6px;
+  padding: 5px;
   margin: 0px 0px;
   margin-bottom: 10px;
 }
@@ -214,8 +214,8 @@ a {
 }
 
 .note {
-  max-width: 600px;
-  min-width: 600px;
+  max-width: 100%;
+  min-width: 100%;
   padding: 10px;
   margin: 30px;
   font-size: 14px;
