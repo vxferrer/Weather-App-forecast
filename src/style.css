@@ -81,8 +81,8 @@ li::first-letter {
   margin-top: 15px;
 }
 
-img {
-  width: 30%;
+.weather-icon {
+  width: 36%;
   height: auto;
 }
 
