@@ -82,7 +82,7 @@ li::first-letter {
 }
 
 img {
-  width: 50%;
+  width: 30%;
   height: auto;
 }
 
@@ -169,16 +169,16 @@ form {
 
 .main-temp {
   color: #4082a6;
-  font-size: 40px;
+  font-size: 200%;
   font-weight: bolder;
   margin: 0;
 }
 
 .units {
   position: relative;
-  font-size: 20px;
+  font-size: 50%;
   color: #4f6d7a;
-  top: -15px;
+  top: -12px;
 }
 
 a {
